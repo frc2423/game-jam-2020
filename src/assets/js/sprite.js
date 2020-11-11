@@ -4,6 +4,7 @@ export default class Sprite {
     this.scene = scene;
     this.sprite = scene.physics.add.image(x, y, image);
     this.destroyed = false;
+    
   }
 
   wrap() {
@@ -13,6 +14,12 @@ export default class Sprite {
   destroy() {
     this.destroyed = true;
     this.sprite.destroy(true);
+  }
+  getXAcceleration(){
+      return this.sprite.body.acceleration.x;
+  }
+  getYAcceleration(){
+      return this.sprite.body.acceleration.y;
   }
 
   isDestroyed() {
@@ -51,6 +58,7 @@ export default class Sprite {
       this.sprite.setAcceleration(x, y);
     }
   }
+  
 
   /**
    * Makes the ship accelerate in the direction of the ship's current rotation.
