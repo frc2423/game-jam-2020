@@ -1,0 +1,4 @@
+
+ports:
+- port: 12001
+  onOpen: open-browser
