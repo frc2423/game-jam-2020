@@ -1,0 +1,6 @@
+class LevelGenerator {
+    
+    constructor(LevelConfig) {
+        
+    }
+}
