@@ -100,4 +100,12 @@ export default class Sprite {
       this.sprite.setMaxVelocity(velocity);
     }
   }
+
+  getX() {
+      return this.sprite.x;
+  }
+
+  getY() {
+      return this.sprite.y;
+  }
 }
