@@ -17,6 +17,15 @@ export default class Asteroid extends Sprite {
         return 300 * Math.random() + 100;
         }
         this.sprite.setVelocity(randomXVelocity(), randomYVelocity());
+        
+        const randomAngularVelocity = () => {
+            if(Math.random() < 0.5) {
+                return -500 * Math.random();
+            } else {
+                return 500 * Math.random();
+            }
+        }
+        this.sprite.setAngularVelocity(randomAngularVelocity());
     }
 
 
@@ -25,7 +34,6 @@ export default class Asteroid extends Sprite {
         if (this.getX() > this.scene.getWidth() || this.getX < 0) {
             this.sprite.destroy();
         }
-
         if (this.getY() > this.scene.getHeight()) {
             this.sprite.destroy();
         }

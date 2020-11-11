@@ -26,19 +26,7 @@ export default class SnakeScene extends Scene {
     this.shipSpeedLabel = this.add.text(10, 10, '', { font: '16px Courier', fill: '#00ff00' });
     this.ship = new Ship(this, 400, 300);
     this.keyboard = new Keyboard(this);
-    this.levelGenerator = new LevelGenerator ({
-        obstacles: [
-            {
-                type: 'asteroid'
-                ,time: 10
-                ,spawnPoint: { x:400, y:0 }
-                ,initialVelocity: { x:10, y:10 }
-            }
-        ]
-
-    });
-
-    this.asteroid = new Asteroid(this, 400, -20);
+    this.levelGenerator = new LevelGenerator (generateLevelOne());
   }
 
   /**
