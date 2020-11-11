@@ -31,7 +31,7 @@
     "webpack-cli": "^3.3.12"
   },
   "scripts": {
-    "webpack" : "webpack", // invoke this command from npm run dev & npm run build
+    "webpack" : "webpack",
     "test": "jest",
     "build": "webpack --mode production",
     "watch": "webpack --mode development --watch"
