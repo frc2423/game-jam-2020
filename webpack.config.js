@@ -7,49 +7,37 @@ const webpack = require('webpack');
 
 
 module.exports = {
-  context: path.resolve(__dirname, "src"),
-  entry: {
-    game: './assets/js/game.js'
-  },
+  entry: './src/index.js',
   output: {
-    filename: "[name].bundle.js",
-    path: path.resolve(__dirname, 'dist')
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist'),
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
-        include: /src/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ['env']
-          }
-        }
+        test: /\.jp[e]?g$|\.png$/,
+        use: [
+          'file-loader',
+        ],
       },
-      { test: /\.html$/, use: ['html-loader'] },
-      //file-loader(for fonts)
       {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: ['file-loader']
-      }
-    ]
+        test: /\.html$/,
+        use: [
+          'html-loader',
+        ],
+      },
+      {
+        type: 'javascript/auto',
+        test: /\.json$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+            },
+          },
+        ],
+      },
+    ],
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: 'index.html'
-    }),
-    new CopyWebpackPlugin([
-      { context: 'assets/media/', from: '**', to: 'assets/media/' }
-    ])
-  ],
-  devServer: {
-    contentBase: path.resolve(__dirname, "dist/assets/media"),
-    stats: 'errors-only',
-    open: true,
-    port: 12001,
-    compress: true,
-  },
-  devtool: 'inline-source-map'
-}
+};
