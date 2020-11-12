@@ -11,7 +11,7 @@ export default class Sprite {
   }
 
   destroy() {
-    this.destroyed = true;
+    this.destroyed = true; 
     this.sprite.destroy(true);
   }
 
@@ -99,5 +99,13 @@ export default class Sprite {
     if (!this.isDestroyed()) {
       this.sprite.setMaxVelocity(velocity);
     }
+    
+  }
+    getX() {
+      return this.sprite.x;
+  }
+
+  getY() {
+      return this.sprite.y;
   }
 }
