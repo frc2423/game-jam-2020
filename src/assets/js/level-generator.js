@@ -14,6 +14,7 @@ export default class LevelGenerator {
     constructor(speedModifier, scene) {
         this.asteroidProgress = 0;
         this.scene = scene;
+        this.presentAsteroids = [];
         
     }
 
@@ -21,11 +22,25 @@ export default class LevelGenerator {
         return (obstacleTime > currentTime - 2000 && obstacleTime < currentTime + 2000);
     }
 
-    update(currentTime) {
-        let currentAsteroid = levelOne.obstacles[this.asteroidProgress];
-        if (this.checkTime(currentTime, currentAsteroid.time) && currentAsteroid.type === "asteroid") {
-            let Asteroid = new Asteroid(this.scene, currentAsteroid.spawnPoint.x, currentAsteroid.spawnPoint.y);
+    checkAsteroids() {
+        for(let i of this.presentAsteroids) {
+            i.update();
         }
+    }
+
+    update(currentTime) {
+        if (this.asteroidProgress >= levelOne.obstacles.length) return;
+
+        let currentAsteroid = levelOne.obstacles[this.asteroidProgress];
+
+        if (this.checkTime(currentTime, currentAsteroid.time) && currentAsteroid.type === "asteroid") {
+            let asteroid = new Asteroid(this.scene, currentAsteroid.spawnPoint.x, currentAsteroid.spawnPoint.y);
+            this.asteroidProgress++;
+            this.presentAsteroids.push(asteroid);
+        }
+
+        this.checkAsteroids();
+
 
     }
 
