@@ -2,9 +2,11 @@ import Sprite from './sprite';
 
 export default class Asteroid extends Sprite {
 
+
     constructor(scene, x, y) {
+        console.log("asteroid should be a constructor");
         super(scene, x, y, 'asteroid');
-        this.sprite.setScale(0.01);
+        /* this.sprite.setScale(0.01);
 
         const randomXVelocity = () => {
             if(Math.random() < 0.5) {
@@ -25,7 +27,7 @@ export default class Asteroid extends Sprite {
                 return 500 * Math.random();
             }
         }
-        this.sprite.setAngularVelocity(randomAngularVelocity());
+        this.sprite.setAngularVelocity(randomAngularVelocity()); */
     }
 
 

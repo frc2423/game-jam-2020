@@ -4,6 +4,7 @@ import Keyboard from './keyboard';
 import Asteroid from './asteroid';
 import Sprite from './sprite';
 
+import LevelGenerator from "./level-generator";
 
 export default class SnakeScene extends Scene {
 
@@ -26,7 +27,7 @@ export default class SnakeScene extends Scene {
     this.shipSpeedLabel = this.add.text(10, 10, '', { font: '16px Courier', fill: '#00ff00' });
     this.ship = new Ship(this, 400, 300);
     this.keyboard = new Keyboard(this);
-    this.levelGenerator = new LevelGenerator (generateLevelOne());
+    this.levelGenerator = new LevelGenerator(3, this);
   }
 
   /**
@@ -43,8 +44,8 @@ export default class SnakeScene extends Scene {
   }
 
   update(time, delta) {
-    this.asteroid.update();
-
+    //* this.asteroid.update();
+    this.levelGenerator.update(time);
   }
 
 }
