@@ -2,8 +2,6 @@
 
 //* const {levelOne} = data;
 
-var levelOne = require('./level-configs/levelOne.json');
-
 import Asteroid from './asteroid';
 
 export default class LevelGenerator {
@@ -11,11 +9,11 @@ export default class LevelGenerator {
     //* let obstacles = levelOne.obstacles[0].spawnPoint
 
 
-    constructor(speedModifier, scene) {
+    constructor(levelConfig, scene) {
         this.asteroidProgress = 0;
         this.scene = scene;
         this.presentAsteroids = [];
-        
+        this.levelConfig = levelConfig;
     }
 
     checkTime(currentTime, obstacleTime) {
@@ -29,9 +27,9 @@ export default class LevelGenerator {
     }
 
     update(currentTime) {
-        if (this.asteroidProgress >= levelOne.obstacles.length) return;
+        if (this.asteroidProgress >= this.levelConfig.obstacles.length) return;
 
-        let currentAsteroid = levelOne.obstacles[this.asteroidProgress];
+        let currentAsteroid = this.levelConfig.obstacles[this.asteroidProgress];
 
         if (this.checkTime(currentTime, currentAsteroid.time) && currentAsteroid.type === "asteroid") {
             let asteroid = new Asteroid(this.scene, currentAsteroid.spawnPoint.x, currentAsteroid.spawnPoint.y);

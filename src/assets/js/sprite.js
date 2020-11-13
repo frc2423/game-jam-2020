@@ -108,4 +108,9 @@ export default class Sprite {
   getY() {
       return this.sprite.y;
   }
+
+  setScale(scale) {
+    this.sprite.setScale(scale);
+  }
+
 }

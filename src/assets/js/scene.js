@@ -6,7 +6,13 @@ import Sprite from './sprite';
 
 import LevelGenerator from "./level-generator";
 
-export default class SnakeScene extends Scene {
+export default class GameScene extends Scene {
+
+    constructor (levelConfig) {
+        super ();
+        this.levelConfig = levelConfig;
+
+    }
 
   /**
    * Use this function to load images which can be used in sprites
@@ -27,7 +33,7 @@ export default class SnakeScene extends Scene {
     this.shipSpeedLabel = this.add.text(10, 10, '', { font: '16px Courier', fill: '#00ff00' });
     this.ship = new Ship(this, 400, 300);
     this.keyboard = new Keyboard(this);
-    this.levelGenerator = new LevelGenerator(3, this);
+    this.levelGenerator = new LevelGenerator(this.levelConfig, this);
   }
 
   /**
