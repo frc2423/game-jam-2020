@@ -31,7 +31,7 @@ export default class SnakeScene extends Scene {
    * autonomousPeriodic and teleopPeriodic functions in robot code
    */
   update(time, delta) {
-      this.blackHole.attract(this.ship)
+      this.blackHole.attract(this.ship , delta)
 
 
   }
