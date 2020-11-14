@@ -32,8 +32,16 @@ export default class SnakeScene extends Scene {
    */
   update(time, delta) {
       this.blackHole.attract(this.ship , delta)
+      console.log(delta, this.getWidth(), this.getHeight(), this)
 
 
+  }
+        getWidth() {
+      return this.game.config.width;
+  }
+
+  getHeight() {
+      return this.game.config.height;
   }
 
 }

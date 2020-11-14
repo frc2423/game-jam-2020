@@ -109,10 +109,10 @@ export default class Sprite {
       return this.sprite.y;
   }
   setY(y) {
-      this.sprite.y = y
+      this.sprite.setY (y)
   }
   setX(x) {
-    this.sprite.x = x
+    this.sprite.setX (x)
   }
 
 }

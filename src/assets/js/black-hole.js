@@ -23,7 +23,7 @@ export default class BlackHole extends Sprite {
       let angle = Math.atan2(o , a)
       let x = force * Math.cos(angle) 
       let y = force * Math.sin(angle)  
-      console.log(x , y, delta)
+      //console.log(x , y, delta)
       ship.setX(ship.getX() - x)
       ship.setY(ship.getY() - y)
   }
