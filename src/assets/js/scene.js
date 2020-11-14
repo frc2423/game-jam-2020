@@ -23,6 +23,10 @@ export default class GameScene extends Scene {
     this.load.image('bullet', 'assets/media/images/bullets.png');
     this.load.image('ship', 'assets/media/images/ship.png');
     this.load.image('asteroid', 'assets/media/images/asteroid.png')
+
+    this.load.spritesheet('shipRightSheet', 'assets/media/images/ship/shipRight_64x64.png', {frameWidth: 64,frameHeight: 64});
+    this.load.spritesheet('shipIdleSheet', 'assets/media/images/ship/shipIdle_64x64.png', {frameWidth: 64,frameHeight: 64});
+    this.load.spritesheet('shipLeftSheet', 'assets/media/images/ship/shipLeft_64x64.png', {frameWidth: 64,frameHeight: 64});
   }
 
   /**
@@ -31,7 +35,9 @@ export default class GameScene extends Scene {
   create() {
     this.add.tileSprite(0, 0, 1600, 1200, 'space');
     this.shipSpeedLabel = this.add.text(10, 10, '', { font: '16px Courier', fill: '#00ff00' });
+
     this.ship = new Ship(this, 400, 300);
+    
     this.keyboard = new Keyboard(this);
     this.levelGenerator = new LevelGenerator(this.levelConfig, this);
   }
@@ -39,7 +45,9 @@ export default class GameScene extends Scene {
   update(time, delta) {
     this.ship.move(this.keyboard.isLeftPressed(), this.keyboard.isRightPressed(), this.keyboard.isUpPressed(), this.keyboard.isDownPressed());
     //* this.asteroid.update();
-    this.levelGenerator.update(time);
+    this.levelGenerator.update(time);    
+    
+
   }  
   
   /**
@@ -55,4 +63,7 @@ export default class GameScene extends Scene {
       return this.game.config.height;
   }
 
+  createAnimation(config) {
+    this.anims.create(config);
+  }
 }

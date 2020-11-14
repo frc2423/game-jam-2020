@@ -2,7 +2,7 @@ export default class Sprite {
 
   constructor(scene, x, y, image) {
     this.scene = scene;
-    this.sprite = scene.physics.add.image(x, y, image);
+    this.sprite = scene.physics.add.sprite(x, y, image);
     this.destroyed = false;
     
   }
@@ -58,6 +58,12 @@ export default class Sprite {
       this.sprite.setAcceleration(x, y);
     }
   }
+
+  playAnimation(key) {
+      if(this.sprite.anims.getCurrentKey() != key){
+        this.sprite.play(key);
+      }
+  }
   
 
   /**
@@ -99,6 +105,9 @@ export default class Sprite {
     return this.sprite.rotation;
   }
 
+  setRotation(rot) {
+    this.sprite.rotation = rot;
+}
   getSpeed() {
     return this.sprite.body.speed;
   }
