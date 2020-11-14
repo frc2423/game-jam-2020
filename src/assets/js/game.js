@@ -1,6 +1,7 @@
 
 import { Game } from 'phaser';
-import AsteroidScene from './scene';
+import GameScene from './scene';
+var levelOne = require('./level-configs/levelOne.json');
 
 const gameConfig = {
   type: Phaser.WEBGL,
@@ -13,7 +14,7 @@ const gameConfig = {
       gravity: { y: 0 }
     }
   },
-  scene: [new AsteroidScene()]
+  scene: [new GameScene(levelOne)]
 };
 
 new Game(gameConfig);

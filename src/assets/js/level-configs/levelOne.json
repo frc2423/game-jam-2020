@@ -1,0 +1,16 @@
+        {"obstacles": [
+            {
+                "type": "asteroid",
+                "time": 5000,
+                "spawnPoint": { "x":400, "y":0 },
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 10000,
+                "spawnPoint": { "x":400, "y":0 },
+                "spawned": false
+            }
+        ]
+
+    }
