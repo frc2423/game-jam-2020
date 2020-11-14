@@ -1,6 +1,7 @@
 import { Scene } from 'phaser';
 import Ship from './ship';
 import Keyboard from './keyboard';
+import Blackhole from './black-hole';
 import Asteroid from './asteroid';
 import Sprite from './sprite';
 
@@ -36,17 +37,16 @@ export default class GameScene extends Scene {
     this.levelGenerator = new LevelGenerator(this.levelConfig, this);
   }
 
+  /**
+   * This is where all the game logic goes. This is similar to the
+   * autonomousPeriodic and teleopPeriodic functions in robot code
+   */
   update(time, delta) {
     this.ship.move(this.keyboard.isLeftPressed(), this.keyboard.isRightPressed(), this.keyboard.isUpPressed(), this.keyboard.isDownPressed());
     //* this.asteroid.update();
     this.levelGenerator.update(time);
   }  
-  
-  /**
-   * This is where all the game logic goes. This is similar to the
-   * autonomousPeriodic and teleopPeriodic functions in robot code
-   */
-
+ 
   getWidth() {
       return this.game.config.width;
   }
