@@ -15,11 +15,19 @@ export default class Sprite {
     this.destroyed = true;
     this.sprite.destroy(true);
   }
-  getXAcceleration(){
+  getXAcceleration() {
       return this.sprite.body.acceleration.x;
   }
-  getYAcceleration(){
+  getYAcceleration() {
       return this.sprite.body.acceleration.y;
+  }
+
+  getXVelocity() {
+      return this.sprite.body.velocity.x;
+  }
+
+  getYVelocity() {
+      return this.sprite.body.velocity.y;
   }
 
   isDestroyed() {
@@ -120,5 +128,4 @@ export default class Sprite {
   setScale(scale) {
     this.sprite.setScale(scale);
   }
-
 }
