@@ -108,4 +108,11 @@ export default class Sprite {
   getY() {
       return this.sprite.y;
   }
+  setY(y) {
+      this.sprite.y = y
+  }
+  setX(x) {
+    this.sprite.x = x
+  }
+
 }

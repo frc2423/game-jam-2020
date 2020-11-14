@@ -1,6 +1,7 @@
 import { Scene } from 'phaser';
 import Ship from './ship';
 import Keyboard from './keyboard';
+import Blackhole from './black-hole';
 
 export default class SnakeScene extends Scene {
 
@@ -22,6 +23,7 @@ export default class SnakeScene extends Scene {
     this.shipSpeedLabel = this.add.text(10, 10, '', { font: '16px Courier', fill: '#00ff00' });
     this.ship = new Ship(this, 400, 300);
     this.keyboard = new Keyboard(this);
+    this.blackHole = new Blackhole(this, 100, 100, 25);
   }
 
   /**
@@ -29,6 +31,7 @@ export default class SnakeScene extends Scene {
    * autonomousPeriodic and teleopPeriodic functions in robot code
    */
   update(time, delta) {
+      this.blackHole.attract(this.ship)
 
 
   }
