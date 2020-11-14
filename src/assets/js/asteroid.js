@@ -1,12 +1,16 @@
 import Sprite from './sprite';
+import Bullets from "./bullets";
 
 export default class Asteroid extends Sprite {
 
-    constructor(scene, x, y) {
+    constructor(scene, x, y, bullets) {
         super(scene, x, y, 'asteroid');
         this.setScale(0.01);
         this.setVelocity(this.randomXVelocity(), this.randomYVelocity());
         this.setAngularVelocity(this.randomAngularVelocity());
+        this.x = x;
+        this.y = y;
+        this.bullets = bullets;
     }
 
     randomXVelocity () {
@@ -33,6 +37,9 @@ export default class Asteroid extends Sprite {
             this.destroy();
         }
         if (this.getY() > this.scene.getHeight()) {
+            this.destroy();
+        }
+        if (this.getX() === this.bullets.getX() && this.getY() === this.bullets.getY()) {
             this.destroy();
         }
     }
