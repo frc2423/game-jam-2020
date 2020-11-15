@@ -5,8 +5,6 @@ export default class Asteroid extends Sprite {
     constructor(scene, x, y) {
         super(scene, x, y, 'asteroid');
         this.setScale(0.01);
-        this.x = x;
-        this.y = y;
     }
 
     init() {
