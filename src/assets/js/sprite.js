@@ -7,7 +7,7 @@ export default class Sprite {
   }
 
   wrap() {
-    this.scene.physics.world.wrap(this.sprite, 32);
+   // this.scene.physics.world.wrap(this.sprite, 32);
   }
 
   destroy() {
