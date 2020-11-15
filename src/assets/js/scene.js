@@ -32,7 +32,9 @@ export default class GameScene extends Scene {
     this.collision = new Collision(this, this.ship);
     this.levelGenerator = new LevelGenerator(this.levelConfig, this);
     this.bullets = new Bullets(this, this.bulletPositionX, this.bulletPositionY, this.ship);
-    console.log(this.physics.add);
+    let asteroid = new Asteroid(this, 300, 0);
+    this.asteroidGroup.add(asteroid.sprite);
+    asteroid.init();
   }
 
   update(time, delta) {
@@ -51,8 +53,9 @@ export default class GameScene extends Scene {
   }
 
   addAsteroid(createdAsteroids) {
+    console.log("Group Called", createdAsteroids.sprite);
     this.asteroidGroup.add(createdAsteroids.sprite);
-    createdAsteroids.init();
+    //createdAsteroids.init();
   }
 
   addBullets(createdBullets) {
