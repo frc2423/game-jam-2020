@@ -13,7 +13,6 @@ export default class GameScene extends Scene {
     constructor (levelConfig) {
         super ();
         this.levelConfig = levelConfig;
-        this.iter = 0;
     }
 
   preload() {
@@ -33,7 +32,6 @@ export default class GameScene extends Scene {
     this.background = this.add.tileSprite(0, 0, 1600, 4800, 'space');
 
     this.shipSpeedLabel = this.add.text(10, 10, '', { font: '16px Courier', fill: '#00ff00' });
-   // this.add.tileSprite(0, 0, 1600, 1200, 'space');
     this.score = 0;
     this.scoreLabel = this.add.text(10, 10, 'Score: 0', { font: '16px Courier', fill: '#00ff00' });
     this.ship = new Ship(this, 400, 300);
