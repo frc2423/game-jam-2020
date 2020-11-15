@@ -11,8 +11,7 @@ const gameConfig = {
     default: 'arcade',
     arcade: {
       fps: 60,
-      gravity: { y: 0 },
-      debug: true
+      gravity: { y: 0 }
     }
   },
   scene: [new GameScene(levelOne)]
