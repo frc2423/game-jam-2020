@@ -81,7 +81,7 @@ export default class Ship extends Sprite {
   }
 
   shoot(space) {
-      if (this.bulletCounter > 100) {
+      if (this.bulletCounter > 50) {
           if (space) {
             let bullets = new Bullets(this.scene, this.getX(), this.getY(), -1 * Math.abs(this.getYVelocity()));
             this.bulletCounter = 0;

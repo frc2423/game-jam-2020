@@ -10,7 +10,761 @@
                 "time": 10000,
                 "spawnPoint": { "x":400, "y":0 },
                 "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 15000,
+                "spawnPoint": { "x":100, "y":0 },
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 15000,
+                "spawnPoint": { "x": 700, "y":0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 16000,
+                "spawnPoint": { "x": 350, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 16500,
+                "spawnPoint": { "x": 600, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 18000,
+                "spawnPoint": { "x": 200, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 18500,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false 
+            },
+            {
+                "type": "asteroid",
+                "time": 18500,
+                "spawnPoint": { "x": 700, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 20000,
+                "spawnPoint": { "x": 700, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 20500,
+                "spawnPoint": { "x": 200, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 20500,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 20500,
+                "spawnPoint": { "x": 600, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 21500,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 21600,
+                "spawnPoint": { "x": 150, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 21700,
+                "spawnPoint": { "x": 500, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 22000,
+                "spawnPoint": { "x": 275, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 24000,
+                "spawnPoint": { "x": 150, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 24000,
+                "spawnPoint": { "x": 300, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 24000,
+                "spawnPoint": { "x": 450, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 24000,
+                "spawnPoint": { "x": 600, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 26000,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 26100,
+                "spawnPoint": { "x": 300, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 26200,
+                "spawnPoint": { "x": 500, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 26800,
+                "spawnPoint": { "x": 550, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 28000,
+                "spawnPoint": { "x": 600, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 28500,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 30000,
+                "spawnPoint": { "x": 250, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 31000,
+                "spawnPoint": { "x": 600, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 31500,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 32000,
+                "spawnPoint": { "x": 350, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 32300,
+                "spawnPoint": { "x": 500, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 32400,
+                "spawnPoint": { "x": 300, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 32500,
+                "spawnPoint": { "x": 450, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 33000,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 35000,
+                "spawnPoint": { "x": 200, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 36000,
+                "spawnPoint":  {"x": 575, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 37000,
+                "spawnPoint": { "x": 600, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 37100,
+                "spawnPoint": { "x": 350, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 37200,
+                "spawnPoint": { "x": 500, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 37300,
+                "spawnPoint": { "x": 200, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 37400,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 37500,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 40000,
+                "spawnPoint": { "x": 300, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 41000,
+                "spawnPoint": { "x": 250, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 42000,
+                "spawnPoint": { "x": 550, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 42000,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 42000,
+                "spawnPoint": { "x": 325, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 44000,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 44000,
+                "spawnPoint": { "x": 200, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 44500,
+                "spawnPoint": { "x": 600, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 45000,
+                "spawnPoint": { "x": 350, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 46000,
+                "spawnPoint": { "x": 350, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 46500,
+                "spawnPoint": { "x": 600, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 48000,
+                "spawnPoint": { "x": 200, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 48500,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false 
+            },
+            {
+                "type": "asteroid",
+                "time": 48500,
+                "spawnPoint": { "x": 700, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 50000,
+                "spawnPoint": { "x": 700, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 50500,
+                "spawnPoint": { "x": 200, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 50500,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 50500,
+                "spawnPoint": { "x": 600, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 51500,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 51600,
+                "spawnPoint": { "x": 150, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 51700,
+                "spawnPoint": { "x": 500, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 52000,
+                "spawnPoint": { "x": 275, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 54000,
+                "spawnPoint": { "x": 150, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 54000,
+                "spawnPoint": { "x": 300, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 54000,
+                "spawnPoint": { "x": 450, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 54000,
+                "spawnPoint": { "x": 600, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 56000,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 56100,
+                "spawnPoint": { "x": 300, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 56200,
+                "spawnPoint": { "x": 500, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 56800,
+                "spawnPoint": { "x": 550, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 58000,
+                "spawnPoint": { "x": 600, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 58500,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 60000,
+                "spawnPoint": { "x": 250, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 61000,
+                "spawnPoint": { "x": 600, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 61500,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 62000,
+                "spawnPoint": { "x": 350, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 62300,
+                "spawnPoint": { "x": 500, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 62400,
+                "spawnPoint": { "x": 300, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 62500,
+                "spawnPoint": { "x": 450, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 63000,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 65000,
+                "spawnPoint": { "x": 200, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 66000,
+                "spawnPoint":  {"x": 575, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 67000,
+                "spawnPoint": { "x": 600, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 67100,
+                "spawnPoint": { "x": 350, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 67200,
+                "spawnPoint": { "x": 500, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 67300,
+                "spawnPoint": { "x": 200, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 67400,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 67500,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 70000,
+                "spawnPoint": { "x": 300, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 71000,
+                "spawnPoint": { "x": 250, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 72000,
+                "spawnPoint": { "x": 550, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 72000,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 72000,
+                "spawnPoint": { "x": 325, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 74000,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 74000,
+                "spawnPoint": { "x": 200, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 74500,
+                "spawnPoint": { "x": 600, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 75000,
+                "spawnPoint": { "x": 350, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 76000,
+                "spawnPoint": { "x": 250, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 77000,
+                "spawnPoint": { "x": 600, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 77500,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 78000,
+                "spawnPoint": { "x": 350, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 78300,
+                "spawnPoint": { "x": 500, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 78400,
+                "spawnPoint": { "x": 300, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 78500,
+                "spawnPoint": { "x": 450, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 79000,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 80000,
+                "spawnPoint": { "x": 200, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 80000,
+                "spawnPoint":  {"x": 575, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 81000,
+                "spawnPoint": { "x": 600, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 81100,
+                "spawnPoint": { "x": 350, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 81200,
+                "spawnPoint": { "x": 500, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 81300,
+                "spawnPoint": { "x": 200, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 81400,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 81500,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 83000,
+                "spawnPoint": { "x": 300, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 84000,
+                "spawnPoint": { "x": 250, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 85000,
+                "spawnPoint": { "x": 550, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 85000,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 85000,
+                "spawnPoint": { "x": 325, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 86000,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 87000,
+                "spawnPoint": { "x": 200, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 87500,
+                "spawnPoint": { "x": 600, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 88000,
+                "spawnPoint": { "x": 350, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 88500,
+                "spawnPoint": { "x": 600, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 89000,
+                "spawnPoint": { "x": 400, "y": 0},
+                "spawned": false
+            },
+            {
+                "type": "asteroid",
+                "time": 89000,
+                "spawnPoint": { "x": 250, "y": 0}
             }
         ]
-
     }
