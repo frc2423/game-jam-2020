@@ -1,4 +1,5 @@
-import Sprite from './sprite';
+import Sprite from "./sprite";
+import Bullets from "./bullets";
 
 export default class Ship extends Sprite {
 
@@ -6,6 +7,7 @@ export default class Ship extends Sprite {
     super(scene, x, y, 'shipIdleSheet');
     this.setMaxVelocity(250);
     this.setDrag(true, 0.80);
+    this.bulletCounter = 0;
     this.setRotation(-Math.PI/2)
 
     scene.createAnimation({
@@ -77,4 +79,15 @@ export default class Ship extends Sprite {
     this.setAcceleration(x,y);
     this.wrap();
   }
+
+  shoot(space) {
+      if (this.bulletCounter > 100) {
+          if (space) {
+            let bullets = new Bullets(this.scene, this.getX(), this.getY(), -1 * Math.abs(this.getYVelocity()));
+            this.bulletCounter = 0;
+            this.scene.addBullets(bullets);
+        }
+      }
+      this.bulletCounter++;
+    }
 }
