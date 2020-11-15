@@ -26,10 +26,13 @@ export default class GameScene extends Scene {
     this.add.tileSprite(0, 0, 1600, 1200, 'space');
     this.shipSpeedLabel = this.add.text(10, 10, '', { font: '16px Courier', fill: '#00ff00' });
     this.ship = new Ship(this, 400, 300);
+    this.asteroidGroup = this.physics.add.group();
+    this.bulletsGroup = this.physics.add.group();
     this.keyboard = new Keyboard(this);
     this.collision = new Collision(this, this.ship);
     this.levelGenerator = new LevelGenerator(this.levelConfig, this);
     this.bullets = new Bullets(this, this.bulletPositionX, this.bulletPositionY, this.ship);
+    console.log(this.physics.add);
   }
 
   update(time, delta) {
@@ -47,4 +50,12 @@ export default class GameScene extends Scene {
       return this.game.config.height;
   }
 
+  addAsteroid(createdAsteroids) {
+    this.asteroidGroup.add(createdAsteroids.sprite);
+    createdAsteroids.init();
+  }
+
+  addBullets(createdBullets) {
+    this.bulletsGroup.add(createdBullets.sprite);
+  }
 }

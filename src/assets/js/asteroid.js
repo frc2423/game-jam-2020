@@ -5,11 +5,13 @@ export default class Asteroid extends Sprite {
     constructor(scene, x, y) {
         super(scene, x, y, 'asteroid');
         this.setScale(0.01);
-        this.setVelocity(this.randomXVelocity(), this.randomYVelocity());
-        this.setAngularVelocity(this.randomAngularVelocity());
         this.x = x;
         this.y = y;
-        //*this.sprite.setSize(50, 50, true);
+    }
+
+    init() {
+        this.setVelocity(this.randomXVelocity(), this.randomYVelocity());
+        this.setAngularVelocity(this.randomAngularVelocity());
     }
 
     randomXVelocity () {

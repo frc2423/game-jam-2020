@@ -7,15 +7,25 @@ export default class Collision {
     constructor (scene, ship) {
         this.ship = ship;
         this.scene = scene;
+        this.scene.physics.add.overlap(this.ship.sprite, this.scene.asteroidGroup, this.shipHitCallback);
+
     }
 
     addPlayerAsteroidCollision(asteroid) {
-        console.log("activated", this.ship, asteroid);
         this.scene.physics.add.overlap(this.ship.sprite, asteroid.sprite, this.shipHitCallback);
     }
 
     shipHitCallback(ship, asteroid) {
-        console.log("callback working", ship, asteroid);
         asteroid.destroy();
+    }
+
+    addBulletAsteroidCollision(asteroid, bullets) {
+        console.log("activated");
+        this.scene.physics.add.overlap(bullets.sprite, asteroid.sprite, this.asteroidHitCallback);
+    }
+
+    asteroidHitCallback (bullets, asteroid) {
+        asteroid.destroy();
+        bullets.destroy();
     }
 }

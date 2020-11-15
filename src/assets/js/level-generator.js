@@ -36,7 +36,7 @@ export default class LevelGenerator {
             let asteroid = new Asteroid(this.scene, currentAsteroid.spawnPoint.x, currentAsteroid.spawnPoint.y);
             this.asteroidProgress++;
             this.presentAsteroids.push(asteroid);
-            this.scene.collision.addPlayerAsteroidCollision(asteroid);
+            this.scene.addAsteroid(asteroid);
         }
 
         this.checkAsteroids();
