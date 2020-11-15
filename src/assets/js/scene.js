@@ -29,8 +29,8 @@ export default class GameScene extends Scene {
 
   create() {
     this.add.tileSprite(0, 0, 1600, 1200, 'space');
-    this.shipSpeedLabel = this.add.text(10, 10, '', { font: '16px Courier', fill: '#00ff00' });
-
+    this.score = 0;
+    this.scoreLabel = this.add.text(10, 10, 'Score: 0', { font: '16px Courier', fill: '#00ff00' });
     this.ship = new Ship(this, 400, 300);
     //this.asteroidGroup = this.physics.add.group();
     //this.bulletsGroup = this.physics.add.group();
@@ -40,6 +40,16 @@ export default class GameScene extends Scene {
     this.bullets = new Bullets(this, this.bulletPositionX, this.bulletPositionY, this.ship);
     this.bulletsGroup = [];
     this.asteroidGroup = [];
+  }
+
+  addPoints(points) {
+    this.score += points;
+    this.scoreLabel.setText(`Score: ${this.score}`);
+  }
+
+  removePoints(points) {
+    this.score -= points;
+    this.scoreLabel.setText(`Score: ${this.score}`);
   }
 
   /**

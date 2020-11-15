@@ -11,19 +11,21 @@ export default class Collision {
     }
 
     addPlayerAsteroidCollision(asteroid) {
-        this.scene.physics.add.overlap(this.ship.sprite, asteroid.sprite, this.shipHitCallback);
+        this.scene.physics.add.overlap(this.ship.sprite, asteroid.sprite, this.shipHitCallback.bind(this));
     }
 
     shipHitCallback(ship, asteroid) {
         asteroid.destroy();
+        this.scene.removePoints(5);
     }
 
     addBulletAsteroidCollision(asteroid, bullets) {
-        this.scene.physics.add.overlap(bullets.sprite, asteroid.sprite, this.asteroidHitCallback);
+        this.scene.physics.add.overlap(bullets.sprite, asteroid.sprite, this.asteroidHitCallback.bind(this));
     }
 
     asteroidHitCallback (bullets, asteroid) {
         asteroid.destroy();
         bullets.destroy();
+        this.scene.addPoints(1);
     }
 }
