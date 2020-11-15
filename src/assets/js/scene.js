@@ -25,6 +25,8 @@ export default class GameScene extends Scene {
     this.load.spritesheet('shipRightSheet', 'assets/media/images/ship/shipRight_64x64.png', {frameWidth: 64,frameHeight: 64});
     this.load.spritesheet('shipIdleSheet', 'assets/media/images/ship/shipIdle_64x64.png', {frameWidth: 64,frameHeight: 64});
     this.load.spritesheet('shipLeftSheet', 'assets/media/images/ship/shipLeft_64x64.png', {frameWidth: 64,frameHeight: 64});
+    this.load.spritesheet('blackHoleSheet', 'assets/media/images/blackHole_45x45.png', {frameWidth: 45,frameHeight: 45});
+
   }
 
   create() {
@@ -40,6 +42,8 @@ export default class GameScene extends Scene {
     this.bullets = new Bullets(this, this.bulletPositionX, this.bulletPositionY, this.ship);
     this.bulletsGroup = [];
     this.asteroidGroup = [];
+
+    this.blackHole = new Blackhole(this, 100, 100, 10);
   }
 
   /**
@@ -51,6 +55,7 @@ export default class GameScene extends Scene {
     //* this.asteroid.update();
     this.levelGenerator.update(time);
     this.ship.shoot(this.keyboard.isSpacePressed());
+    this.blackHole.attract(this.ship, delta);
   }  
  
   getWidth() {

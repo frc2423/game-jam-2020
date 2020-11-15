@@ -6,8 +6,17 @@ black hole should pull ship towards black hole.
 export default class BlackHole extends Sprite {
 
   constructor(scene, x, y, radius) {
-    super(scene, x, y, 'bullet');
+    super(scene, x, y, 'blackHoleSheet');
     this.radius = radius
+
+    scene.createAnimation({
+        key: 'blackHoleIdle',
+        frames: 'blackHoleSheet',
+        frameRate: 16,
+        repeat: -1
+    });
+
+    this.playAnimation('blackHoleIdle');
   }
   getForce(ship) {
       let distance = ((this.getY() - ship.getY()) **2 + (this.getX() - ship.getX()) **2) **.5; 
