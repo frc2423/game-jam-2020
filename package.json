@@ -33,7 +33,8 @@
   "scripts": {
     "webpack": "webpack",
     "test": "jest",
-    "build": "webpack --mode production",
+    "build": "webpack -d --config webpack.config.js",
+
     "watch": "webpack --mode development --watch"
   },
   "jest": {
