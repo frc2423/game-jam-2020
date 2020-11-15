@@ -11,7 +11,7 @@ export default class Collision {
 
     addPlayerAsteroidCollision(asteroid) {
         console.log("activated", this.ship, asteroid);
-        this.scene.physics.add.collider(this.ship.sprite, asteroid.sprite, this.shipHitCallback);
+        this.scene.physics.add.overlap(this.ship.sprite, asteroid.sprite, this.shipHitCallback);
     }
 
     shipHitCallback(ship, asteroid) {
