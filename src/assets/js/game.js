@@ -4,7 +4,7 @@ import GameScene from './scene';
 var levelOne = require('./level-configs/levelOne.json');
 
 const gameConfig = {
-  type: Phaser.AUTO,
+  type: Phaser.WEBGL,
   width: 800,
   height: 600,
   physics: {

@@ -26,15 +26,14 @@ export default class GameScene extends Scene {
     this.add.tileSprite(0, 0, 1600, 1200, 'space');
     this.shipSpeedLabel = this.add.text(10, 10, '', { font: '16px Courier', fill: '#00ff00' });
     this.ship = new Ship(this, 400, 300);
-    this.asteroidGroup = this.physics.add.group();
-    this.bulletsGroup = this.physics.add.group();
+    //this.asteroidGroup = this.physics.add.group();
+    //this.bulletsGroup = this.physics.add.group();
     this.keyboard = new Keyboard(this);
     this.collision = new Collision(this, this.ship);
     this.levelGenerator = new LevelGenerator(this.levelConfig, this);
     this.bullets = new Bullets(this, this.bulletPositionX, this.bulletPositionY, this.ship);
-    let asteroid = new Asteroid(this, 300, 0);
-    this.asteroidGroup.add(asteroid.sprite);
-    asteroid.init();
+    this.bulletsGroup = [];
+    this.asteroidGroup = [];
   }
 
   update(time, delta) {
@@ -52,13 +51,23 @@ export default class GameScene extends Scene {
       return this.game.config.height;
   }
 
+  // for adding groups later
+
   addAsteroid(createdAsteroids) {
-    console.log("Group Called", createdAsteroids.sprite);
-    this.asteroidGroup.add(createdAsteroids.sprite);
-    //createdAsteroids.init();
+    //this.asteroidGroup.add(createdAsteroids.sprite);
+    createdAsteroids.init();
+    this.asteroidGroup.push(createdAsteroids);
+    this.collision.addPlayerAsteroidCollision(createdAsteroids);
+    this.bulletsGroup.forEach(bullets => {
+        this.collision.addBulletAsteroidCollision(createdAsteroids, bullets);
+    });
   }
 
   addBullets(createdBullets) {
-    this.bulletsGroup.add(createdBullets.sprite);
+    //this.bulletsGroup.add(createdBullets.sprite);
+    this.bulletsGroup.push(createdBullets);
+    this.asteroidGroup.forEach(asteroid => {
+        this.collision.addBulletAsteroidCollision(asteroid, createdBullets);
+    });
   }
 }
