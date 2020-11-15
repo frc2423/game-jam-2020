@@ -2,9 +2,8 @@ export default class Sprite {
 
   constructor(scene, x, y, image) {
     this.scene = scene;
-    this.sprite = scene.physics.add.image(x, y, image);
+    this.sprite = scene.physics.add.sprite(x, y, image);
     this.destroyed = false;
-    
   }
 
   wrap() {
@@ -12,14 +11,22 @@ export default class Sprite {
   }
 
   destroy() {
-    this.destroyed = true;
+    this.destroyed = true; 
     this.sprite.destroy(true);
   }
-  getXAcceleration(){
+  getXAcceleration() {
       return this.sprite.body.acceleration.x;
   }
-  getYAcceleration(){
+  getYAcceleration() {
       return this.sprite.body.acceleration.y;
+  }
+
+  getXVelocity() {
+      return this.sprite.body.velocity.x;
+  }
+
+  getYVelocity() {
+      return this.sprite.body.velocity.y;
   }
 
   isDestroyed() {
@@ -57,6 +64,12 @@ export default class Sprite {
     if (!this.isDestroyed()) {
       this.sprite.setAcceleration(x, y);
     }
+  }
+
+  playAnimation(key) {
+      if(this.sprite.anims.getCurrentKey() != key){
+        this.sprite.play(key);
+      }
   }
   
 
@@ -99,6 +112,9 @@ export default class Sprite {
     return this.sprite.rotation;
   }
 
+  setRotation(rot) {
+    this.sprite.rotation = rot;
+}
   getSpeed() {
     return this.sprite.body.speed;
   }
@@ -107,6 +123,7 @@ export default class Sprite {
     if (!this.isDestroyed()) {
       this.sprite.setMaxVelocity(velocity);
     }
+    
   }
 
   getX() {
@@ -117,8 +134,15 @@ export default class Sprite {
       return this.sprite.y;
   }
 
+  setY(y) {
+      this.sprite.setY (y);
+  }
+  
+  setX(x) {
+    this.sprite.setX (x);
+  }
+
   setScale(scale) {
     this.sprite.setScale(scale);
   }
-
 }
