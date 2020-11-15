@@ -20,4 +20,8 @@ export default class Keyboard {
   isRightPressed() {
     return this.cursors.right.isDown;
   }
+
+  isSpacePressed() {
+    return this.cursors.space.isDown;
+  }
 }
