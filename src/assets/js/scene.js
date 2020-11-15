@@ -28,6 +28,7 @@ export default class GameScene extends Scene {
     this.load.spritesheet('shipRightSheet', 'assets/media/images/ship/shipRight_64x64.png', {frameWidth: 64,frameHeight: 64});
     this.load.spritesheet('shipIdleSheet', 'assets/media/images/ship/shipIdle_64x64.png', {frameWidth: 64,frameHeight: 64});
     this.load.spritesheet('shipLeftSheet', 'assets/media/images/ship/shipLeft_64x64.png', {frameWidth: 64,frameHeight: 64});
+    this.load.audio('theme', ['assets/media/audio/start-screen-music.wav']);
   }
 
   /**
@@ -41,6 +42,10 @@ export default class GameScene extends Scene {
     
     this.keyboard = new Keyboard(this);
     this.levelGenerator = new LevelGenerator(this.levelConfig, this);
+
+    var music = this.sound.add('theme');
+    music.setLoop(true);
+    music.play();
   }
 
   /**
