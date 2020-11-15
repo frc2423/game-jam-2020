@@ -4,7 +4,8 @@ export default class Sprite {
     this.scene = scene;
     this.sprite = scene.physics.add.image(x, y, image);
     this.destroyed = false;
-    
+    //*this.sprite.setCollideWorldBounds(true);
+    //*this.sprite.setCircle(300);
   }
 
   wrap() {

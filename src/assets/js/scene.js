@@ -5,6 +5,7 @@ import Asteroid from './asteroid';
 import Sprite from './sprite';
 import LevelGenerator from "./level-generator";
 import Bullets from './bullets';
+import Collision from './collision';
 
 export default class GameScene extends Scene {
 
@@ -26,6 +27,7 @@ export default class GameScene extends Scene {
     this.shipSpeedLabel = this.add.text(10, 10, '', { font: '16px Courier', fill: '#00ff00' });
     this.ship = new Ship(this, 400, 300);
     this.keyboard = new Keyboard(this);
+    this.collision = new Collision(this, this.ship);
     this.levelGenerator = new LevelGenerator(this.levelConfig, this);
     this.bullets = new Bullets(this, this.bulletPositionX, this.bulletPositionY, this.ship);
   }

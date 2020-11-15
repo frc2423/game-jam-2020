@@ -1,15 +1,13 @@
 import Sprite from "./sprite";
 import Ship from "./ship";
-import Asteroid from "./asteroid";
 
 export default class Bullets extends Sprite {
 
-    constructor(scene, x, y, velocityY, asteroids) {
+    constructor(scene, x, y, velocityY) {
         super(scene, x, y, 'bullets');
         this.setVelocity(0, velocityY - 200);
         this.x = x;
         this.y = y;
-        this.asteroids = asteroids;
     }
 
     update() {
@@ -17,9 +15,6 @@ export default class Bullets extends Sprite {
             this.destroy();
         }
         if (this.getY() > this.scene.getHeight()) {
-            this.destroy();
-        }
-        if (this.getX() === this.asteroid.getX() && this.getY() === this.asteroid.getY()) {
             this.destroy();
         }
     }

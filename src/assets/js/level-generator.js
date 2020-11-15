@@ -3,6 +3,7 @@
 //* const {levelOne} = data;
 
 import Asteroid from './asteroid';
+import Collision from "./collision"
 
 export default class LevelGenerator {
 
@@ -35,6 +36,7 @@ export default class LevelGenerator {
             let asteroid = new Asteroid(this.scene, currentAsteroid.spawnPoint.x, currentAsteroid.spawnPoint.y);
             this.asteroidProgress++;
             this.presentAsteroids.push(asteroid);
+            this.scene.collision.addPlayerAsteroidCollision(asteroid);
         }
 
         this.checkAsteroids();
