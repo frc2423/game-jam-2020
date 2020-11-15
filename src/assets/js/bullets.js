@@ -5,7 +5,7 @@ export default class Bullets extends Sprite {
 
     constructor(scene, x, y, velocityY) {
         super(scene, x, y, 'bullets');
-        this.setVelocity(0, velocityY - 200);
+        this.setVelocity(0, velocityY - 250);
         this.setRotation(-Math.PI/2);
     }
 
