@@ -42,8 +42,6 @@ export default class GameScene extends Scene {
     this.bullets = new Bullets(this, this.bulletPositionX, this.bulletPositionY, this.ship);
     this.bulletsGroup = [];
     this.asteroidGroup = [];
-
-    this.blackHole = new Blackhole(this, 100, 100, 10);
   }
 
   /**
@@ -55,7 +53,6 @@ export default class GameScene extends Scene {
     //* this.asteroid.update();
     this.levelGenerator.update(time);
     this.ship.shoot(this.keyboard.isSpacePressed());
-    this.blackHole.attract(this.ship, delta);
   }  
  
   getWidth() {
